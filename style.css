@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    background: linear-gradient(25deg,rgba(0, 153, 255, 0.63)  , rgba(98, 0, 255, 0.685) );
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 500ms;
+}
+body.theme{ 
+    background: rgb(31, 31, 31);
+    color: white;
+    border-color: white;
+}
+
+#input{
+    width: 300px;
+    padding: 5px 9px;
+    outline: 0;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+#btns{
+    width: 50%;
+    margin-top: 30px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+button{
+    color: white;
+    background: rgba(238, 28, 28, 0);
+    width: 200px;
+    padding:5px 5px ;
+    border-radius: 30px ;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bolder;
+    border: 0px;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),15px 15px 15px rgba(0, 0, 0, 0.103);
+    transition: 500ms all;
+}
+/* #btn1{
+    background-color: rgb(255, 0, 34);
+}
+#btn2{
+    background-color: chartreuse;
+} */
+#btn1:hover,#btn2:hover,#btn3:hover{
+    color: black;
+    background-color: white;
+    box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.199),15px 15px 15px rgba(0, 0, 0, 0.103),-5px -5px 5px rgba(255, 255, 255, 0.205) inset,5px 5px 5px rgba(0, 0, 0, 0.205) inset;
+}
+textarea{
+    width: 50%;
+    height: 20vh;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 30px;
+    padding: 60px 10px;
+    resize: none;
+}
+h1{
+    margin-bottom: 20px;
+}
+#theme{
+    width: 50px;
+    height: 25px;
+    cursor: pointer;
+    appearance: none;
+    background-color: rgb(37, 37, 37);
+    border-radius: 30px;
+    position: relative;
+}
+#theme.theme{
+    background-color: rgb(224, 224, 224);
+}
+footer{
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+#slider{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: rgb(255, 255, 255);
+    border-radius: 30px;
+    left: -4%;
+    z-index: 2;
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.212) inset, -2px -2px 5px rgba(0, 0, 0, 0.199) inset;
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: 500ms;
+}
+#slider.theme{
+    background: rgb(68, 68, 68);
+    left: 56%;
+}
+@media screen and (max-width:1240px) {
+    #btns{
+        width:80%;
+    }
+}
+@media screen and (max-width:690px) {
+    #btns{
+        width: 100%;
+    }
+}
+@media screen and (max-width:599px) {
+    textarea{
+        width: 100%;
+    }
+    button{
+        width: 150px;
+    }
+}
+@media screen and (max-width:460px) {
+    #btns{
+        height: 30vh;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+@media screen and (max-width:306px){
+    #input{
+        width: 100%;
+    }
+
+}
